@@ -52,9 +52,4 @@ web-build/
 .github/workflows/
 .gitpod.yml
 
-# Ignorar archivos de configuración de npm/yarn/pnpm lock si no deseas versionarlos (opcional)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 
