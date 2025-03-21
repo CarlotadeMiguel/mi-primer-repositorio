@@ -19,7 +19,7 @@ function App() {
         </a>
       </header>
       <footer>
-        <p>© 2025 Mi Portafolio | <a href="#">Inicio</a> | <a href="#">Contacto</a></p>
+        <p>© 2025 Mi Portafolio | <a href="https://github.com/CarlotadeMiguel">Inicio</a> | <a href="https://github.com/CarlotadeMiguel">Contacto</a></p>
         <button class="subir" onclick="window.scrollTo(0, 0)">↑</button>
     </footer>
     </div>
