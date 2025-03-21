@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+footer .subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #293857;
+  color: #61dafb;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+footer .subir:hover {
+  background-color: #61dafb;
+  color: #293857;;
+}
+
+footer .subir:focus {
+  outline: none;
+}
