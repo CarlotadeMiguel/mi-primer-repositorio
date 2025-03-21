@@ -29,17 +29,17 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-
-# Configura las credenciales de AWS usando la acción oficial
+    
+    # Configura las credenciales de AWS usando la acción oficial
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
         aws-access-key-id: "ASIAZLLIXLS7AMWLWUZP"
-        aws-secret-access-key: "EQCZHmxg/CRlAzogYBF6H6/aoUuutGaGxx6RxVsF"
-        aws_session_token: "IQoJb3JpZ2luX2VjEFIaCXVzLXdlc3QtMiJGMEQCICF3Qu+q8pZHKaeWttKIbIR+hJ2wl3/vlrMHtxSvf0LsAiA86QZODYKzT95qDrWvsLssGPvhGQoUJ1JfGg8uL99xVirCAgir//////////8BEAEaDDY0Mjg1NDExNjU0MiIM5B1lM90zmdmYaSegKpYChJoOz3Jpc3EU73l1H9urtqKomXZ1Lm8v2teBy6+IY4oygkNoNEYnpZwIGpp9/gNmYe5MO4RVcNHsbM9tJ8gHAPhAaWXu4WEyojDFSMwlDsRdn0vue1cZnBzQlqGPwEC+rXg3a9F8xqfmN1gwwlKtF6eeH3r/m2d+X8OWdcdjm5raPmUrCPzzGuLwJtyew5l16ZFtESvhoC+3Qm7fvj5sZls6iwqCYQHRlcTF32XSz4QFv8PxKwSgCsXR6yYVGqMLdRu8B+aUI5Pcsq64AwwCeuLEsZ3skpXWsiQnYh54IeFkKcY5jnXWXn0cNCdY78U5A2v4MdsRb1VEMGXbuTAg1+bCc+ydpatduUPPlw9kLBEsPruakeYw+sH2vgY6ngH/Py8nwCyS6UlF3fa2HowvuIH9SoFEvCibXnuObHsZ8UpGjiK0k5ePMJl2v6x7UoaG2f4BKmZ4Y/cOCOaCX1IyZGAeSQoTbRNhp4jCX+VkVWxCHthBlsNRC0Gr28YvApzAPEUuGbLLIYzSQlX2M+OyPwgPwrBtKepqsCZkyr+lSQusG3V/Xd64EWq9+UPCFEaW6MO+G8J72J3+M9VJog=="
+        aws-secret-access-key: "EQCZHmxg/CRlAzogYBF6H6/aoUuutGaGxx6RxVs"
+        aws-session-token: "IQoJb3JpZ2luX2VjEFIaCXVzLXdlc3QtMiJGMEQCICF3Qu+q8pZHKaeWttKIbIR+hJ2wl3/vlrMHtxSvf0LsAiA86QZODYKzT95qDrWvsLssGPvhGQoUJ1JfGg8uL99xVirCAgir//////////8BEAEaDDY0Mjg1NDExNjU0MiIM5B1lM90zmdmYaSegKpYChJoOz3Jpc3EU73l1H9urtqKomXZ1Lm8v2teBy6+IY4oygkNoNEYnpZwIGpp9/gNmYe5MO4RVcNHsbM9tJ8gHAPhAaWXu4WEyojDFSMwlDsRdn0vue1cZnBzQlqGPwEC+rXg3a9F8xqfmN1gwwlKtF6eeH3r/m2d+X8OWdcdjm5raPmUrCPzzGuLwJtyew5l16ZFtESvhoC+3Qm7fvj5sZls6iwqCYQHRlcTF32XSz4QFv8PxKwSgCsXR6yYVGqMLdRu8B+aUI5Pcsq64AwwCeuLEsZ3skpXWsiQnYh54IeFkKcY5jnXWXn0cNCdY78U5A2v4MdsRb1VEMGXbuTAg1+bCc+ydpatduUPPlw9kLBEsPruakeYw+sH2vgY6ngH/Py8nwCyS6UlF3fa2HowvuIH9SoFEvCibXnuObHsZ8UpGjiK0k5ePMJl2v6x7UoaG2f4BKmZ4Y/cOCOaCX1IyZGAeSQoTbRNhp4jCX+VkVWxCHthBlsNRC0Gr28YvApzAPEUuGbLLIYzSQlX2M+OyPwgPwrBtKepqsCZkyr+lSQusG3V/Xd64EWq9+UPCFEaW6MO+G8J72J3+M9VJog=="
         aws-region: 'us-east-1'  # Cambia la región si es necesario
-    
- # Sube los archivos al bucket S3
+
+    # Sube los archivos al bucket S3
     - name: Deploy to S3
       run: |
         aws s3 sync ./build/ s3://mi-s3-despliegue-continuo/ --delete
