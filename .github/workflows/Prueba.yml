@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Echo message
         run: |
+          echo "${GITHUB_SHA}"
           echo "Este es un mensaje desde GitHub Actions"
           echo "El repositorio es: ${{ github.repository }}"
           echo "El evento que disparó este flujo es: ${{ github.event_name }}"
