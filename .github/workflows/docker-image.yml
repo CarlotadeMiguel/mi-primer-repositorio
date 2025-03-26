@@ -23,4 +23,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/reactrepository:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/reactrepository:${{ GITHUB_SHA:0:7 }}
