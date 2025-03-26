@@ -25,4 +25,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/reactrepository:latest
-            ${{ secrets.DOCKER_USERNAME }}/reactrepository:${GITHUB_SHA}
+            ${{ secrets.DOCKER_USERNAME }}/reactrepository:${GITHUB_SHA:0:7}
