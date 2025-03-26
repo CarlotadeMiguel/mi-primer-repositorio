@@ -1,0 +1,15 @@
+name: Echo Example
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  echo-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        run: |
+          echo "Este es un mensaje desde GitHub Actions"
+          echo "El repositorio es: ${{ github.repository }}"
+          echo "El evento que disparó este flujo es: ${{ github.event_name }}"
