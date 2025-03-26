@@ -23,11 +23,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/reactrepository:${{ GITHUB_SHA:0:7 }}
-
-      - name: Echo message
-        run: |
-          echo "${GITHUB_SHA}"
-          echo "Este es un mensaje desde GitHub Actions"
-          echo "El repositorio es: ${{ github.repository }}"
-          echo "El evento que disparó este flujo es: ${{ github.event_name }}"
+          tags: ${{ secrets.DOCKER_USERNAME }}/reactrepository:latest
